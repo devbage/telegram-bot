@@ -4,8 +4,8 @@ module.exports = function () {
   const TelegramBot = require('node-telegram-bot-api')
 
   //ENTRE AS ASPAS DEVE SER INSERIDO O TOKEN ADQUIRIDO AO CRIAR UM BOT COM O BotFather
-  const TOKEN = '633210668:AAFpPGDiGZV9NXY0u4mERxWkS_sdkIQEEQU'
-  const CHAT_ID = '-375279573'
+  const TOKEN = ''
+  const CHAT_ID = ''
   const bot = new TelegramBot(TOKEN, { polling: true })
 
   bot.onText(/\/echo (.+)/, (msg, match) => {
