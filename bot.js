@@ -17,22 +17,6 @@ module.exports = function () {
 
   var date = new Date;
 
-  bot.onText(/\/love/, function onLoveText(msg) {
-
-    const opts = {
-    
-      reply_to_message_id: msg.message_id,
-      reply_markup: JSON.stringify({
-        keyboard: [
-          ['Sim, você é o bot da minha vida ❤'],
-          ['Não, desculpe, há outro ...']
-        ]
-      })
-    };
-
-    bot.sendMessage(msg.chat.id, 'Do you love me?', opts);
-  });
-
   bot.on('new_chat_members', (msg) => {
 
     bot.sendMessage(msg.chat.id, `Olá ${msg.new_chat_participant.first_name}, seja bem vindo ao devBage!! ` +
